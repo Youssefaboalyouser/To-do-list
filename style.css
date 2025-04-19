@@ -1,0 +1,107 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:serif;
+}
+.container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(135deg,#153677,#4e085f);
+    padding: 10px;
+}
+.container .card{
+    align-self:flex-start;
+    border-radius: 10px;
+    background-color: #ffffff;
+    width: 100%;
+    max-width: 540px;
+    margin: 100px auto 20px;
+    padding: 40px 30px 70px;
+}
+.card .main{
+    color: #000000;
+    margin-bottom: 20px;
+}
+.card .main i{
+    font-size: 20px;
+}
+.card .row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(229 229 229);
+    border-radius: 30px;
+    padding-left: 20px;
+    margin-bottom: 25px;
+}
+.row input{
+    flex: 1;
+    border: none;
+    outline: none;
+    background:transparent;
+    padding: 10px;
+    font-weight: 14px;
+}
+.row button{
+    border: none;
+    outline: none;
+    padding: 16px 50px;
+    background-color: #00950c;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 40px;
+    opacity: 0.5;
+    transition: 0.3s ease-in-out;
+}
+button:hover{
+    opacity: 1;
+}
+.card .tasks li{
+    list-style: none;
+    font-size: 17px;
+    padding: 12px 8px 12px 50px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
+}
+.tasks li::before{
+    content: '';
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    background-image: url(not_checked.png); 
+    background-position: center;
+    background-size: cover;
+    top: 12px;
+    left: 8px;
+}
+.tasks li.checked{
+    color: #555;
+    text-decoration: line-through;
+}
+.tasks li.checked::before{
+    background-image: url(checked.png);
+}
+.tasks li span{
+    position: absolute;
+    right: 0;
+    top:5px;
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    color: #00950c;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%;
+    transition: 0.3s ease-in-out;
+}
+.tasks li span:hover{
+    color: red;
+    background-color: #edeef0;
+}
